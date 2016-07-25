@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>6fb3ef3c-6eb8-4abe-8d42-37d20ab26e33</ProjectGuid>
+    <ProjectGuid>{C52080E6-8B43-4925-A46C-E939E8E67784}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CheckSkills.UnitTests</RootNamespace>
@@ -50,8 +50,18 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CheckSkills.Domain\CheckSkills.Domain.csproj">
+      <Project>{d59aaa81-f543-4d5d-92a9-1b39e1654329}</Project>
+      <Name>CheckSkills.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CheckSkills.WpfUI\CheckSkills.WpfUI.csproj">
+      <Project>{c3223e4d-7d4b-4de6-9b18-9356423cc8b3}</Project>
+      <Name>CheckSkills.WpfUI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
